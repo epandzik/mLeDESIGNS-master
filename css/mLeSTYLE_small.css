@@ -1,0 +1,120 @@
+/* SO MANY ISSUES!!
+trying to get it so that small devices open using this stylesheet. I'm working on vertical orientation only right now.
+(for all orientations, refer to this page
+http://webdesign.tutsplus.com/tutorials/a-flexible-approach-to-responsive-navigation--webdesign-8397
+or this page
+http://www.smashingmagazine.com/2010/07/19/how-to-use-css3-media-queries-to-create-a-mobile-version-of-your-website/
+for help).
+
+got the rotation code from here
+(http://stackoverflow.com/questions/14233341/how-can-i-rotate-an-html-div-to-90-degrees)
+
+want it so that the nav bar doesn't shrink, fills the height of the window with evenly spaced buttons. would like it (eventuallY)
+that the change in orientation changes the nav bar to horizontal, but maybe spread all across? so that they'd be big enough to click on.
+
+at this point, the nav bar is rotated 90 degrees. unfortunately, it's placement is all wrong. and when fixed gets attached,
+the placement gets worse?!!?
+*/
+
+h1 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: #000000;
+    font-size: 1.75em;
+    padding-left: 6.82%;
+    padding-right: 15.91%;
+}
+
+h2 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: #000000;
+    font-size: 1.5em;
+    padding-left: 6.82%;
+    padding-right: 15.91%;
+}
+
+h3 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: #000000;
+    font-size: 1.25em;
+    padding-left: 6.82%;
+    padding-right: 15.91%;
+}
+
+p {
+    color:#000;
+    padding-left: 6.82%;
+    padding-right: 15.91%;
+    font-family: "Gentium Book Basic", serif;
+    padding-bottom: 1.705%;
+}
+
+body {
+    margin:0;
+    background-color: white;
+    font-family: "Gentium Book Basic", serif;
+}
+
+#masthead {
+    height:auto;
+    width:100%;
+}
+
+/*nav bar Buttons*/
+#button {
+    white-space: nowrap;
+    max-width: 100%;
+    background-color: #297691;
+}
+
+.single-button {
+    width: 13.28%;
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+    list-style-type: none;
+}
+
+/*divs for sticky nav bar*/
+nav {
+    width: auto;
+    height: 100%;
+    z-index:500;
+
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+/*classes for sticky nav bar*/
+.fixed {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: auto;
+}
+
+.fixed .nav-inner {
+    margin: 0 auto;
+}
+
+/* unvisited and visited links */
+a:link,
+a:visited {
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    color: #000;
+}
+
+/* mouse over and selected links */
+a:hover,
+a:active {
+    text-decoration: underline;
+    font-family: "Open Sans", sans-serif;
+    color: #e0150f;
+}
